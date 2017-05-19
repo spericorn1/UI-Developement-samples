@@ -1,0 +1,1073 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Business Settings -  DandM</title>
+	
+	
+	<style>
+		.loader {
+		  border: 3px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 3px solid #5cbc63;
+		  border-bottom: 3px solid #5cbc63;
+		  width: 31px;
+		  height: 31px;
+		  margin: 0 auto;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite;
+		  margin-bottom: 5px;
+		}
+		
+		.block_overflow{
+			overflow: hidden;
+		}
+
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
+
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		.main-box.hide-x{
+			overflow-x: hidden !important;
+		}
+	</style>
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	
+	<!-- site Basic structure CSS -->
+	<link href="css/basic.css" rel="stylesheet">
+	
+	
+	<!-- Data table CSS -->
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+
+  </head>
+
+  <body>
+	
+	<div class="main-div flex-div">
+
+	<nav>
+		<div class="flex-con">
+	 
+			<div class="left-con dropdown-toggle logo-brand full-width-drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				<div class="c-icon">
+				   <span class="c-logo-sub">
+						C
+					</span>
+				</div>
+				<div class="c-logo">
+				   <img src="img/logo-acme.jpg" alt="ACME Logo">
+				</div>
+				<div class="c-name-start">
+				   Another Company with a super re
+				</div>
+				<div class="c-name-end">
+				   ally very really long name Pty Ltd
+				</div>
+				<div class="c-arrow">
+				   <span><i class="flaticon-arrows-1"></i></span>
+				</div>
+			</div>
+			<ul class="dropdown-menu logo-drop">
+                <li class="md-trigger"  data-toggle="modal" data-target="#company-switch-modal">
+					<div class="c-logo2 c-logo" style="background: url(img/logo-def.jpg);">
+					</div>
+					<div class="split-text" data-content-start="GHI Company Long " data-content-end="Long Name Ltd"></div>
+				</li>
+				<li class="md-trigger"  data-toggle="modal" data-target="#company-switch-modal">
+					<div class="c-logo2 c-logo" style="background: url(img/logo-ghi.jpg);">
+					</div>
+					<div class="split-text" data-content-start="GHI Company Lo" data-content-end="ng Name Ltd"></div>
+				</li>
+				<li class="md-trigger"  data-toggle="modal" data-target="#company-switch-modal">
+					<div class="c-logo2 c-logo" style="background: url(img/logo-jkl.jpg);">
+					</div>
+					<div class="split-text" data-content-start="JKL Company Lo" data-content-end="ng Name Ltd"></div>
+				</li>
+            </ul>
+			
+			
+		
+			<div class="right-con">
+			
+				<div class="help-icon large-flaticons">
+				   <a href="#"><span><i class="flaticon-round"></i></span></a>
+				</div>
+				
+				<div class="settings-icon large-flaticons">
+					<a href="#"><span><i class="flaticon-settings"></i></span></a>
+				</div>
+				
+				<div class="menu-icon large-flaticons dropdown full-width-450">
+					<a href="#" class="dropdown-toggle has-notifi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<span class="notifi-value">2</span>
+					<span><i class="flaticon-bars"></i></span>
+					</a>
+					<ul class="dropdown-menu notifi-drop">
+						<div class="row">
+							<div class="col-xs-3">
+								<a href="list.html" class="menu-drop-box-icon">
+									<span><i class="flaticon-calculator"></i></span>
+									<span class="info-page">Accounting</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon">
+									<span><i class="flaticon-inbox"></i></span>
+									<span class="info-page">Inventory</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon">
+									<span><i class="flaticon-invoice"></i></span>
+									<span class="info-page">Payroll</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon">
+									<span><i class="flaticon-phone-call"></i></span>
+									<span class="info-page">Contacts</span>
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon has-notifi">
+									<span class="notifi-value">2</span>
+									<span><i class="flaticon-envelope"></i></span>
+									<span class="info-page">Messages</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon">
+									<span><i class="flaticon-graphic"></i></span>
+									<span class="info-page">Reports</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="business-location.html" class="menu-drop-box-icon">
+									<span><i class="flaticon-graphic-1"></i></span>
+									<span class="info-page">Business</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="business-settings.html" class="menu-drop-box-icon active">
+									<span><i class="flaticon-settings"></i></span>
+									<span class="info-page">Settings</span>
+								</a>
+							</div>
+						</div>
+					</ul>
+				</div>
+				
+				<div class="right-con position-relative" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<div class="n-con">
+						<div class="u-fname">
+						   John 'Really really
+						</div>
+						<div class="u-lname">
+							long name' Doe
+						</div>
+					</div>
+					<div class="u-photo">
+					   <!-- Profile Image Holder -->
+					</div>
+					<div class="u-arrow">
+					   <span><i class="flaticon-arrows-1"></i></span>
+					</div>
+				</div>
+				<ul class="dropdown-menu user-menu-dro">
+					<li><a href="#"><span><i class="flaticon-draw"></i></span>Edit Profile</a></li>
+					<li><a href="#"><span class="rotate-45"><i class="flaticon-log-out"></i></span>Logout</a></li>
+				</ul>
+				
+			</div>
+		
+		</div>
+	</nav>
+	
+	
+
+	<!-- Static navbar -->
+	<div>
+	
+		<div class="sub-menu-name">SETTINGS</div>
+
+		<div id="main-menu">
+			<div class="main-menu">
+			
+				<a href="#" id="btn-drop" class="btn-menu main-menu-center">Business <span class="menu-3-head"><i class="flaticon-arrows-1"></i></span></a>	
+				
+				<ul id="submenu" class="main-menu-list main-menu-center">
+					<li>
+						<a href="#">Dashboard</a>
+					</li>
+					<li>
+						<a href="#">Accounting</a>
+					</li>
+					<li class="active">
+						<a href="#">Business</a>
+					</li>
+					<li>
+						<a href="#">Notifications</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	
+	
+	<div class="clearfix"></div>
+	
+	
+	
+	
+	
+
+		<div class="head">
+				<div class="h-center col3-center shadow">
+					<div class="top-bar">
+						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-7">
+							<span class="page-title">Business Settings</span>
+						</div>
+						
+						<div class="col-lg-4 col-md-5 col-sm-5 hide-for-850 page-search">
+							<div class="input-group">
+							  <span class="input-group-addon"><i class="flaticon-magnifying-glass"></i></span>
+							  <input type="text" class="form-control z00" placeholder="Search">
+							</div>
+						</div>
+							
+
+						<div class="top-bar-optn pull-right"> <!-- hide-for-550 -->
+								
+									<div class="btn-group pull-right show-for-1023" style="position: relative;">
+									  <button type="button" class="btn btn-default btn-custom-sm table-menu-btn show-pop-up-nav-for-small" style="padding-left: 10px; padding-right: 10px; " >
+										<span><i class="glyph-icon flaticon-arrows-1 drop-down-arrow-btn" style="margin-right: 0px;"></i></span>
+									  </button>
+									  
+									  <div class="pop-up-nav-for-small">
+									  
+										<form class="form-inline show-for-850" style="padding: 25px 22px 10px; width: 100%; min-height: 100px; float: none;">
+											<div class="form-group" style="margin-bottom: 0px;">
+												<input type="text" class="form-control search-in-dropdown" placeholder="Type Something">
+												<input type="submit" class="form-control search-in-dropdown" value="Search" style="margin-top: 5px;">
+											</div>
+										</form>
+										
+										<ul class="details-list">
+											<a href="#BusinessSettings" data-scroll="BusinessSettings">Business Settings</a>
+											<a href="#GeneralSettings" data-scroll="GeneralSettings">General Settings</a>
+											<a href="#PrimaryLocation" data-scroll="PrimaryLocation">Primary Location</a>
+											<a href="#SuperUsers" data-scroll="SuperUsers">Super Users</a>
+											<a href="#ExportDatabase" data-scroll="ExportDatabase">Export Database</a>
+											<a href="#SubscriptionDetails" data-scroll="SubscriptionDetails">Subscription Details</a>
+											<a href="#TerminateBusinessAccount" data-scroll="TerminateBusinessAccount">Terminate BusinessAccount</a>											
+										</ul>
+										
+									  </div>
+
+									</div>
+									
+									
+									
+									
+									
+									
+ 									<div class="btn-group pull-right">
+									  <button type="button" class="btn btn-default btn-custom-sm table-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<span><i class="flaticon-bars btn-icon"></i></span> <span class="hide-for-550">Permissions</span>
+									  </button>
+									  <ul class="dropdown-menu table-menu-drop in-modal">
+										<li><a href="#"><span><i class="flaticon-send-mail btn-icon"></i></span>Send Details Form</a></li>
+										<li><a href="#"><span><i class="flaticon-copy-documents-option btn-icon"></i></span>Export</a></li>
+										<li><a href="#"><span><i class="flaticon-hide btn-icon"></i></span>Deactivate User</a></li>
+										<li><a href="#"><span><i class="flaticon-delete-button btn-icon"></i></span>Terminate User</a></li>
+									  </ul>
+									</div>
+	
+									
+						</div>
+					</div>
+				</div> <!-- .top-bar -->
+				<div class="h-right w-300">
+					<span class="menu-title">Settings</span>
+				</div>
+		</div> <!-- .head -->
+		
+		<div class="content">
+			
+				
+				<div class="center get-change-in-field scroll-and-get container-fluid select-45 shadow">
+					
+					
+					
+					
+					
+					
+					
+					<section id="BusinessSettings" data-anchor="BusinessSettings" class="form-row-head" style="position: relative; width: 100%; float:left;">
+						
+						<div class="row">
+							<span class="form-block-head font-16 col-lg-6 col-md-offset-2 col-sm-offset-1">Business Settings</span>
+						</div>
+
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Business Structure
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>Company</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Legal Name
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left has-toolTip">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Legal Name</label>
+												<span class="toolTip-icon" data-toggle="tooltip" title="Legal Name">(i)</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Display name
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left has-toolTip">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Display name</label>
+												<span class="toolTip-icon" data-toggle="tooltip" title="Display name">(i)</span>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Australian Business Number (ABN)
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">ABN</label>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Australian Company Number (ACN)
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">ACN</label>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Main Business
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>Industry</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</section> <!-- BusinessSettings -->
+					
+					
+					
+					
+					<section id="GeneralSettings" data-anchor="GeneralSettings" class="form-row-head" style="position: relative; width: 100%; float:left;">
+						
+						<div class="row">
+							<span class="form-block-head font-16 col-lg-6 col-md-offset-2 col-sm-offset-1">Business Settings</span>
+						</div>
+						
+
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Country Data is Stored
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<label class="sp-label font-14 padding-top-15">
+												Australia <a href="#"> Change</a>
+											</label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Date Format
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>Date Format</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Time Zone
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>Time Zone</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Primary Currency
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>Primary Currency</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+											<label class="control control--checkbox"> Enable Multi Currency
+												<input type="checkbox" checked="checked">
+												<div class="control__indicator"></div>
+											</label>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</section> <!-- GeneralSettings -->
+					
+					
+					
+					
+					
+					
+					<section id="PrimaryLocation" data-anchor="PrimaryLocation" class="form-row-head" style="position: relative; width: 100%; float:left;">
+						
+						<div class="row">
+							<span class="form-block-head font-16 col-lg-6 col-md-offset-2 col-sm-offset-1">Primary Location</span>
+						</div>
+						
+
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Set Primary Location as
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>Custom</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Phone
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Phone</label>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Fax
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Fax</label>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Email
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Email</label>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Physical Address
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Physical Address</label>
+											</div>
+										</div>
+										<div class="col-xs-6 max-width-300 go-full-width-450 hide-for-450">
+											<label class="sp-label font-14 padding-top-15">
+												Town/Suburb
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Physical Line 2
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Physical Line 2</label>
+											</div>
+										</div>
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>Town/Suburb</option>
+													<option>Town</option>
+													<option>Suburb</option>
+													<option>4</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<label class="control control--checkbox"> Postal Address is Same as Physical Address
+										<input type="checkbox" checked="checked">
+										<div class="control__indicator"></div>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Postal Address
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Physical Address</label>
+											</div>
+										</div>
+										<div class="col-xs-6 max-width-300 go-full-width-450 hide-for-450">
+											<label class="sp-label font-14 padding-top-15">
+												Town/Suburb
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-block-each-child">
+							<div class="row">
+								<div class="col-lg-5 col-sm-5 text-right-sm">
+									<label class="sp-label font-14 padding-top-15">
+										Postal Line 2
+									</label>
+								</div>
+								<div class="col-lg-7 col-sm-7 form-inlin">
+									<div class="row">
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group text-left">
+												<input type="text" class="form-control dm-form label-up-can" id="">
+												<label class="label-up" for="pwd">Postal Line 2</label>
+											</div>
+										</div>
+										<div class="col-xs-6 max-width-300 go-full-width-450">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>Town/Suburb</option>
+													<option>Town</option>
+													<option>Suburb</option>
+													<option>4</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+					</section> <!-- PrimaryLocation -->
+					
+					
+					
+					<section id="SuperUsers" data-anchor="SuperUsers" class="form-row-head" style="position: relative; width: 100%; float:left;">
+						
+						<div class="row">
+							<span class="form-block-head font-16 col-lg-6 col-md-offset-2 col-sm-offset-1">Super Users</span>
+						<div>
+						
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-block-list">
+									
+									<div class="container-fluid">
+										<div class="row">
+											<a href="#" class="pull-right">Access super User Priviliges</a>
+										</div>
+									</div>
+									<ul class="form-block-list-ul">
+										<li>John doe | Super User Since 10/11/2016  <a href="#">Guarantor</a></li>
+										<li>John doe | Super User Since 11/11/2016</li>										
+									</ul>
+									<a href="#" class="pull-left"> Remove Yourself from Super Users</a>
+									<div class="pull-right option-add">
+										<ul class="icons-info ">
+											<li class="add-more"></li>
+										</ul>
+										<span class="icon-label">Add Super User</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						
+					</section><!-- SuperUsers -->
+					
+					
+					
+					<section id="ExportDatabase" data-anchor="ExportDatabase" class="form-row-head" style="position: relative; width: 100%; float:left;">
+						
+						<div class="row">
+							<span class="form-block-head font-16 col-lg-6 col-md-offset-2 col-sm-offset-1">Export Database</span>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-block-list">
+									You don't need to backup your data, we do it for you.<br>
+If you would like to copy of your data to keep as your own backup or for any other purpose you can create a current backup (we'll email you when it's ready) and then download it from here
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-block-list">
+									<div class="col-lg-3 col-sm-3 text-right-sm">
+											<label class="sp-label font-14 padding-top-15">
+												Send email to
+											</label>
+									</div>
+									<div class="col-lg-5 col-sm-5">
+											<div class="form-group">
+												<select class="form-control" id="">
+													<option>johndoe@acompanyname.com</option>
+													<option>1</option>
+													<option>2</option>
+												</select>
+											</div>
+									</div>
+									<div class="col-lg-4 col-sm-4">
+										<button type="button" class="btn btn-g btn-success">Create a Current Backup</button>
+									</div>
+									<div class="col-lg-8 col-sm-8 text-right-sm">
+											<label class="sp-label font-14 padding-top-15">
+												Database created on 04/12/2016 at 01:42:12 pm
+											</label>
+									</div>
+									<div class="col-lg-4 col-sm-4">
+										<button type="button" class="btn btn-g btn-success">Download</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						
+					</section><!-- ExportDatabase -->
+					
+					
+					
+					<section id="SubscriptionDetails" data-anchor="SubscriptionDetails" class="form-row-head" style="position: relative; width: 100%; float:left;">
+						
+						<div class="row">
+							<span class="form-block-head font-16 col-lg-6 col-md-offset-2 col-sm-offset-1">Subscription Details</span>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-block-list">
+									
+									<div class="container-fluid">
+										<div class="row">
+											<p class="pull-left">Changes for 1st - 14th November</p>
+											<a href="#" class="pull-right">View Invoices</a>
+										</div>
+									</div>
+									<ul class="form-block-list-ul">
+										<li>Accounting - $23.33 (14 days)</li>
+										<li>Payroll - $16.00 ($ payruns)</li>										
+									</ul>
+									<a href="#" class="pull-left">Cancel a Service</a>
+									<p class="pull-right"><b>Current Changes $37.33(AUD)</b></p>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-block-list text-center">
+									<p><b>
+										Billing periods are for a full month, invoices are generated on the first day of each month for the previous month.
+Next direct debit is due to occur on the 7th December from Credit Card ending in '1234'
+									</b></p>
+									<a href="#" class="pull-right">Change Payment Details</a>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+					</section><!-- SubscriptionDetails -->
+					
+					
+					
+					
+					<section id="TerminateBusinessAccount" data-anchor="TerminateBusinessAccount" class="form-row-head" style="position: relative; width: 100%; float:left;">
+					
+						<div class="row">
+							<span class="form-block-head font-16 col-lg-6 col-md-offset-2 col-sm-offset-1">Terminate Business Account</span>
+						</div>
+						
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-block-list">
+									<div class="col-lg-12 col-sm-12">
+										<label class="control control--checkbox"> I want to terminate this business account
+											<input type="checkbox" checked="checked">
+											<div class="control__indicator"></div>
+										</label>
+									</div>
+									<div class="col-lg-12 col-sm-12">
+										<button type="button" class="btn btn-g btn-success">Terminate Business Account</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						
+					</section><!-- TerminateBusinessAccount -->
+
+	
+					<br>
+					<br>
+					<br>
+
+
+				</div> <!-- .center -->
+				
+				<div class="right col3-right w-300">
+					<ul class="details-list details-list-lg">
+				
+						<a href="#BusinessSettings" data-scroll="BusinessSettings">Business Settings</a>
+						<a href="#GeneralSettings" data-scroll="GeneralSettings">General Settings</a>
+						<a href="#PrimaryLocation" data-scroll="PrimaryLocation">Primary Location</a>
+						<a href="#SuperUsers" data-scroll="SuperUsers">Super Users</a>
+						<a href="#ExportDatabase" data-scroll="ExportDatabase">Export Database</a>
+						<a href="#SubscriptionDetails" data-scroll="SubscriptionDetails">Subscription Details</a>
+						<a href="#TerminateBusinessAccount" data-scroll="TerminateBusinessAccount">Terminate BusinessAccount</a>
+		
+					</ul>
+				</div> <!-- .right -->
+			
+			</div>
+
+	
+	<div class="scroll-top-in-div">
+		<a href="#General-Details">
+			<span class="glyph-icon flaticon-arrows-1"></span>
+		</a> 
+	</div>
+
+
+	
+	
+	<!-- Company switch login -->
+	
+	<!-- Modal -->
+	<div id="company-switch-modal" class="modal no-padding dm-modal-style just-me" role="dialog" style="background: white;">
+	  <div class="modal-dialog full-view-wrapper">
+
+		<!-- Modal content-->
+
+			<div class="login-module-confirm">
+				<div class="login-head">
+					<div class="login-logo">
+						
+					</div>
+					<span>D&M Spark Enterprices Pty Ltd</span>
+				</div>
+				<form>
+					<div class="form-label-style1">
+						Confirm Password
+					</div>
+					<div class="form-group margin-bottom-10">
+						<input type="password" class="login-form" id="" placeholder="Password">
+					</div>
+					<button type="submit" class="btn btn-default btn-login">Confirm</button>
+				</form>
+				<a class="login-link" href="#" data-dismiss="modal">Cancel</a>
+			</div>
+			
+			<div class="footer-landing">
+				<div class="copyright-landing">
+						<a href="#" class="login-footer-logo"></a>
+						<p class="copyright_p">Copyright ©2016 Spark App Ltd. All RIGHTS RESERVED</p>
+				</div>
+			</div>
+			
+	  </div>
+	</div>
+	
+
+
+	</div> <!-- main-div -->
+	
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- Data table JS -->
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script> -->
+	
+	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap.min.js"></script> -->
+	
+
+	
+
+	<!-- Main JS -->
+	<script src="js/basic.js"></script>
+	
+	
+	
+	<script>
+		$(document).ready(function() {
+			$(".table-loader-pre").fadeOut("slow");
+			
+			$('body').removeClass('block_overflow');
+			
+			
+			$('.main-box').removeClass('hide-x');
+			
+		});
+	</script>
+	
+  </body>
+</html>
+
+
+
+
+

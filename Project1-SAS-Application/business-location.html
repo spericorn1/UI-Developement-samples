@@ -1,0 +1,1419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Business Location - New Modal DandM</title>
+	
+	
+	<style>
+		.pre-loader-wrapper{
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			top: 45%;
+			left: 50%;
+			margin-left: -35px;
+			font-size: 12px;
+			text-align: center; 
+		}
+		.loader-input {
+		  border: 2px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 2px solid #5cbc63;
+		  border-right: 2px solid #5cbc63;
+		  width: 17px;
+		  height: 17px;
+		  position: absolute;
+		  top: 10px;
+		  right: 10px;
+		  -webkit-animation: spin 0.5s linear infinite;
+		  animation: spin 0.5s linear infinite;
+		  display: none;
+		}
+		.has-input-loader .loader-input{
+			display: block;
+		}
+		.loader {
+		  border: 3px solid #f3f3f3;
+		  border-radius: 50%;
+		  border-top: 3px solid #5cbc63;
+		  border-bottom: 3px solid #5cbc63;
+		  width: 31px;
+		  height: 31px;
+		  margin: 0 auto;
+		  -webkit-animation: spin 2s linear infinite;
+		  animation: spin 2s linear infinite;
+		  margin-bottom: 5px;
+		}
+		
+		.block_overflow{
+			overflow: hidden;
+		}
+
+		@-webkit-keyframes spin {
+		  0% { -webkit-transform: rotate(0deg); }
+		  100% { -webkit-transform: rotate(360deg); }
+		}
+
+		@keyframes spin {
+		  0% { transform: rotate(0deg); }
+		  100% { transform: rotate(360deg); }
+		}
+		.main-box.hide-x{
+			overflow-x: hidden !important;
+		}
+	</style>
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	
+	<!-- site Basic structure CSS -->
+	<link href="css/basic.css" rel="stylesheet">
+	
+	
+	<!-- Data table CSS -->
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+
+  </head>
+
+  <body>
+	
+	<div class="main-div">
+
+  
+    <!-- Static navbar -->
+
+	<nav>
+		<div class="flex-con">
+	 
+			<div class="left-con dropdown-toggle logo-brand full-width-drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+				<div class="c-icon">
+				   <span class="c-logo-sub">
+						C
+					</span>
+				</div>
+				<div class="c-logo">
+				   <img src="img/logo-acme.jpg" alt="ACME Logo">
+				</div>
+				<div class="c-name-start">
+				   Another Company with a super re
+				</div>
+				<div class="c-name-end">
+				   ally very really long name Pty Ltd
+				</div>
+				<div class="c-arrow">
+				   <span><i class="flaticon-arrows-1"></i></span>
+				</div>
+			</div>
+			<ul class="dropdown-menu logo-drop">
+                <li class="md-trigger"  data-toggle="modal" data-target="#company-switch-modal">
+					<div class="c-logo2 c-logo" style="background: url(img/logo-def.jpg);">
+					</div>
+					<div class="split-text" data-content-start="GHI Company Long " data-content-end="Long Name Ltd"></div>
+				</li>
+				<li class="md-trigger"  data-toggle="modal" data-target="#company-switch-modal">
+					<div class="c-logo2 c-logo" style="background: url(img/logo-ghi.jpg);">
+					</div>
+					<div class="split-text" data-content-start="GHI Company Lo" data-content-end="ng Name Ltd"></div>
+				</li>
+				<li class="md-trigger"  data-toggle="modal" data-target="#company-switch-modal">
+					<div class="c-logo2 c-logo" style="background: url(img/logo-jkl.jpg);">
+					</div>
+					<div class="split-text" data-content-start="JKL Company Lo" data-content-end="ng Name Ltd"></div>
+				</li>
+            </ul>
+			
+			
+		
+			<div class="right-con">
+			
+				<div class="help-icon large-flaticons">
+				   <a href="#"><span><i class="flaticon-round"></i></span></a>
+				</div>
+				
+				<div class="settings-icon large-flaticons">
+					<a href="#"><span><i class="flaticon-settings"></i></span></a>
+				</div>
+				
+				<div class="menu-icon large-flaticons dropdown full-width-450">
+					<a href="#" class="dropdown-toggle has-notifi" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<span class="notifi-value">2</span>
+					<span><i class="flaticon-bars"></i></span>
+					</a>
+					<ul class="dropdown-menu notifi-drop">
+						<div class="row">
+							<div class="col-xs-3">
+								<a href="list.html" class="menu-drop-box-icon">
+									<span><i class="flaticon-calculator"></i></span>
+									<span class="info-page">Accounting</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon">
+									<span><i class="flaticon-inbox"></i></span>
+									<span class="info-page">Inventory</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon">
+									<span><i class="flaticon-invoice"></i></span>
+									<span class="info-page">Payroll</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon">
+									<span><i class="flaticon-phone-call"></i></span>
+									<span class="info-page">Contacts</span>
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon has-notifi">
+									<span class="notifi-value">2</span>
+									<span><i class="flaticon-envelope"></i></span>
+									<span class="info-page">Messages</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="#" class="menu-drop-box-icon">
+									<span><i class="flaticon-graphic"></i></span>
+									<span class="info-page">Reports</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="business-location.html" class="menu-drop-box-icon active">
+									<span><i class="flaticon-graphic-1"></i></span>
+									<span class="info-page">Business</span>
+								</a>
+							</div>
+							<div class="col-xs-3">
+								<a href="business-settings.html" class="menu-drop-box-icon">
+									<span><i class="flaticon-settings"></i></span>
+									<span class="info-page">Settings</span>
+								</a>
+							</div>
+						</div>
+					</ul>
+				</div>
+				
+				<div class="right-con position-relative" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					<div class="n-con">
+						<div class="u-fname">
+						   John 'Really really
+						</div>
+						<div class="u-lname">
+							long name' Doe
+						</div>
+					</div>
+					<div class="u-photo">
+					   <!-- Profile Image Holder -->
+					</div>
+					<div class="u-arrow">
+					   <span><i class="flaticon-arrows-1"></i></span>
+					</div>
+				</div>
+				<ul class="dropdown-menu user-menu-dro">
+					<li><a href="#"><span><i class="flaticon-draw"></i></span>Edit Profile</a></li>
+					<li><a href="#"><span class="rotate-45"><i class="flaticon-log-out"></i></span>Logout</a></li>
+				</ul>
+				
+			</div>
+		
+		</div>
+	</nav>
+	
+	
+	
+
+	
+
+	<!-- Static navbar -->
+	<div>
+	
+		<div class="sub-menu-name">Business</div>
+
+		<div id="main-menu">
+			<div class="main-menu">
+			
+				<a href="#" id="btn-drop" class="btn-menu main-menu-center">Business<span class="menu-3-head"><i class="flaticon-arrows-1"></i></span></a>	
+				
+				<ul id="submenu" class="main-menu-list main-menu-center">
+					<li class="active">
+						<a href="business-location.html">Locations</a>
+					</li>
+					<li>
+						<a href="business-position.html">Positions</a>
+					</li>
+					<li>
+						<a href="business-users.html">Users</a>
+					</li>
+					<li>
+						<a href="#">Reports</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+
+	
+	
+	
+	<div class="clearfix"></div>
+	
+	
+	
+	
+
+    <div class="container-fluid main-wrapper">
+	
+		
+
+	
+		<div class="box-menu-top margin-top-10-765 padding-bottom-10">
+
+
+				<div class="row">
+					<div class="col-xs-6">
+						<div class="input-group" style="max-width: 250px;">
+							  <span class="input-group-addon"><i class="flaticon-magnifying-glass"></i></span>
+							  <input type="text" class="form-control z00" placeholder="Search">
+						</div>
+					</div>
+					<div class="col-xs-6">
+					
+						
+						<div class="btn-group pull-right has-hero-panel">
+						  <button type="button" class="btn btn-default btn-custom table-menu-btn dropdown-toggle hero-panel-dismiss-optional" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+							<span><i class="flaticon-bars btn-icon"></i></span> Menu
+						  </button>
+						  <ul class="dropdown-menu table-menu-drop">
+							<li><a href="#" class="toggle-hero-panel toggle-btn-toggle"><span><i class="flaticon-text-document btn-icon"></i></span>New</a></li>
+							<li><a href="#"><span><i class="flaticon-edit btn-icon"></i></span>Import</a></li>
+							<li><a href="#"><span><i class="flaticon-copy-documents-option btn-icon"></i></span>Copy</a></li>
+							<li><a href="#"><span><i class="flaticon-telegram btn-icon"></i></span>Export</a></li>
+							<li><a href="#"><span><i class="flaticon-delete-button btn-icon"></i></span>Delete</a></li>
+						  </ul>
+						  
+						  <div class="hero-panel width-350">
+							<a href="#" class="hero-panel-dismiss">×</a>
+							
+							<div class="hero-panel-custom-top">
+								<button type="button" class="btn btn-default btn-custom hero-panel-dismiss-optional pull-left btn-padding-8" data-toggle="modal" data-target="#BusinessLocation">
+									Create & Edit
+								</button>
+								
+								<button type="button" class="btn btn-default btn-custom hero-panel-dismiss-optional pull-right btn-padding-8" >
+									Create Location
+								</button>
+							</div>
+							
+							
+							<div class="hero-panel-body">
+								<div class="form-block-each-child select-45">
+								
+									<div class="form-group has-an-error has-input-loader">
+										<input type="text" class="form-control dm-form label-up-can" value="" id="">
+										<label class="label-up" for="pwd">Name</label>
+										<div class="loader-input"></div>
+										<span class="form-error-info">Please enter a valid name</span> <!-- Error data goes here -->
+									</div>
+									
+									<div class="form-group has-an-error">
+										<select class="form-control  drop-menu-for-small" id="">
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+										</select>
+										<span class="form-error-info">Please select an option</span>
+									</div>
+									
+									<div class="form-group long-select">
+										<select class="form-control  drop-menu-for-small" id="">
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+											<option>Location (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+										</select>
+									</div>
+									
+									<div class="form-group ">
+										<select class="form-control  drop-menu-for-small" id="">
+											<option>Apply from (Optional)</option>
+											<option>Another Position</option>
+											<option>Another Permission</option>
+										</select>
+									</div>
+									
+								</div>
+							</div>
+						  </div>
+						  
+						</div>
+						
+						
+					</div>
+				</div>
+				
+		
+		</div>
+		
+		
+		<div class="row">
+			
+			<div class="col-xs-6 alert-count-panel">
+				<div class="auto-width">
+					<div class="alert-count">
+						<span id="checked" class="checked"></span> Selected
+						<span class="dismiss">X</span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		<div class="main-box hide-x">
+
+			
+			<!-- Data Table >> -->
+			<div class="table-responsive_ table-cont-layer">
+			
+				<div class="table-loader-pre" style="position: absolute; left:0; top: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 1); z-index: 5;">
+					
+					<div class="pre-loader-wrapper" style="">
+						<div class="loader">
+							
+						</div>
+						Loading
+					</div>
+					
+				</div>
+
+				
+				<table id="example" class="table-busniness-position table table-striped table-bordered dt-responsive nowrap no-border" cellspacing="0" width="100%">
+					<thead>
+						<tr>
+							<th class="table_select_column no-sort" data-priority="1" style="width: 20px;"><input type="checkbox" name="select_all" class="" value="1" id="example-select-all"></th>
+							<th data-priority="3" class="no-sort" style="min-width: 200px;">Location</th>
+							<th data-priority="4" class="no-sort">Contact Details</th>
+							<th data-priority="5" class="no-sort text-center" style="width: 100px;">Users With <br> Access <span class="tool-tip-cont" data-placement="bottom" data-toggle="tooltip" title="Show info here!" >(i)</span></th>
+							<th data-priority="6" class="no-sort text-center" style="width: 100px;">Users at this <br> Location <span class="tool-tip-cont" data-placement="bottom" data-toggle="tooltip" title="Show info here!">(i)</span></th>
+							<th data-priority="7" class="no-sort"> Type </th>
+							<th style="max-width: 20px;" data-priority="2" class="no-bg-icon no-sort"><span style="display: block; width: 20px;">&nbsp;</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="twin-row">
+							<td><input class="chk" type="checkbox" /></td>
+							<td class="td-text-break">
+								<div class="table-large-t">
+									 -- -- -- AnotherBCompanyVeryLongNamePvtLtd
+								</div>
+								<span class="break-sub">Location Name D Company Pvt Ltd, Queensland, Australia</span>
+							</td>
+							<td>
+								<span class="block-element">e:headoffice@acompany.com</span>
+								<span class="block-element">p:9846405434</span>
+							</td>
+							<td class="text-center">1</td>
+							<td class="text-center">2</td>
+							<td>Location</td>
+							<td style="position: relative; width: 23px;">
+								<span class="table-down table-down-right dropdown-toggle hide-collapsed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flaticon-arrows-1"></i></span>
+								<ul class="dropdown-menu table-row-op large-drop hide-collapsed">
+									<li><a href="#">Edit Access</a></li>
+									<li><a href="#">Edit Location</a></li>
+								</ul>
+								
+								<span class="table-down table-down-right show-collapsed2"><i class="flaticon-arrows-1"></i></span>
+								<ul class="dropdown-menu table-row-op show-collapsed"> <!-- For child tr -->
+									<li><a href="#">Edit Access</a></li>
+									<li><a href="#">Edit Location</a></li>
+								</ul>
+
+							</td>
+						</tr>
+
+						
+						<tr class="twin-row">
+							<td><input class="chk" type="checkbox" /></td>
+							<td>
+								<span class="table-large-t">A Company Pty Ltd.</span>
+								123 A Company Lane, Town, State, Post
+							</td>
+							<td>
+								<span class="block-element">e:headoffice@acompany.com</span>
+								<span class="block-element">p:9846405434</span>
+							</td>
+							<td class="text-center">1</td>
+							<td class="text-center">2</td>
+							<td>Location</td>
+							<td style="position: relative; width: 23px;">
+								<span class="table-down table-down-right dropdown-toggle hide-collapsed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flaticon-arrows-1"></i></span>
+								<ul class="dropdown-menu table-row-op large-drop hide-collapsed">
+									<li><a href="#">Edit Access</a></li>
+									<li><a href="#">Edit Location</a></li>
+								</ul>
+								
+								<span class="table-down table-down-right show-collapsed2"><i class="flaticon-arrows-1"></i></span>
+								<ul class="dropdown-menu table-row-op show-collapsed">
+									<li><a href="#">Edit Access</a></li>
+									<li><a href="#">Edit Location</a></li>
+								</ul>
+
+							</td>
+						</tr>
+						
+						<tr class="twin-row">
+							<td><input class="chk" type="checkbox" /></td>
+							<td>
+								<span class="table-large-t">A Company Pty Ltd.</span>
+								123 A Company Lane, Town, State, Post
+							</td>
+							<td>
+								<span class="block-element">e:headoffice@acompany.com</span>
+								<span class="block-element">p:9846405434</span>
+							</td>
+							<td class="text-center">1</td>
+							<td class="text-center">2</td>
+							<td>Location</td>
+							<td style="position: relative; width: 23px;">
+								<span class="table-down table-down-right dropdown-toggle hide-collapsed" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flaticon-arrows-1"></i></span>
+								<ul class="dropdown-menu table-row-op large-drop hide-collapsed">
+									<li><a href="#">Edit Access</a></li>
+									<li><a href="#">Edit Location</a></li>
+								</ul>
+								
+								<span class="table-down table-down-right show-collapsed2"><i class="flaticon-arrows-1"></i></span>
+								<ul class="dropdown-menu table-row-op show-collapsed">
+									<li><a href="#">Edit Access</a></li>
+									<li><a href="#">Edit Location</a></li>
+								</ul>
+
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+			<!-- Responsive Data Table << -->
+			
+		</div>
+		
+		<div class="table-pagination">
+			<!-- Pagination -->
+			<div class="pull-left m-pagination">
+				<ul class="dropup-pagination">
+					<li>
+						<a href="#"><span><i class="flaticon-arrows-1"></i></span></a>
+					</li>
+					<li class="dropup">
+						<a href="#" class="dropdown-toggle pagination-drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							3
+						</a>
+						<ul class="dropdown-menu dropdown-menu-rows">
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>6</li>
+							<li>7</li>
+							<li>8</li>
+							<li>9</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><span><i class="flaticon-arrows-1"></i></span></a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- <div class="footer-mid hide-for-478">
+				<a href="#" class="pull-left footer-logo"></a> <span class="f-copyright">Copyright ©2016 Spark App Ltd. All RIGHTS RESERVED</span>
+			</div> -->
+			
+			<div class="pull-right m-pagination">
+				<ul class="dropup-table-rows">
+					<li class="dropup">
+						<a class="dropdown-toggle pagination-drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							10
+						</a>
+						<ul class="dropdown-menu dropdown-menu-rows">
+							<li>10</li>
+							<li>15</li>
+							<li>20</li>
+							<li>25</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			
+		</div>
+		
+		<div style="text-align: center;">
+		
+			<div class="footer-mid">
+				<a href="#" class="pull-left footer-logo"></a> <span class="f-copyright">Copyright ©2016 Spark App Ltd. All RIGHTS RESERVED</span>
+			</div>
+		
+		</div>
+		
+
+    </div> <!-- /container -->
+
+	<!-- <footer class="container-fluid">
+		<a href="#" class="pull-left footer-logo"></a> <span class="f-copyright">Copyright ©2016 Spark App Ltd. All RIGHTS RESERVED</span>
+	</footer> -->
+	
+	<div class="scroll-top-in-div">
+		<a href="#General-Details">
+			<span class="glyph-icon flaticon-arrows-1"></span>
+		</a> 
+	</div>
+
+
+		<!-- Modal -->
+		<div id="success1" class="modal no-padding  just-me" role="dialog" >
+		  <div class="modal-dialog modal-alert">
+
+			<div class="modal-alert-head">
+				Alert
+			</div>
+			
+			<div class="modal-alert-body">
+				Here is your Message
+			</div>
+			
+			
+			<div class="modal-alert-options">
+				<button type="button" class="btn btn-default"  data-dismiss="modal">
+					Cancel
+				</button>
+				<button type="button" class="btn btn-danger"  data-dismiss="modal">
+					Continue
+				</button>
+			</div>
+			
+				
+		  </div>
+		</div>
+		
+
+	
+	<!-- Modal - Business Location >> -->
+	
+	<div class="modal no-padding show-from-bottom fade dm-modal-style" id="BusinessLocation" aria-hidden="true">
+
+		<div class="modal-container">
+					  
+			<div class="modal-header dm-modal-head">
+				<div class="pull-left user-details-head">
+					<h4 class="modal-title">Location Details</h4>
+				</div>
+
+				<div class="form-search-box hide-for-850">
+								
+					<form class="form-inline main-search">
+								<div class="form-group">
+									<input type="text" class="form-control form-search-input" placeholder="Search">
+									<!-- <input type="submit" class="form-control form-search-input no-gap" value="Search"> -->
+								</div>
+								<span class="close-main-search">
+									X
+								</span>
+					</form>
+				</div>
+					
+					
+				<div class="pull-right pop-top-close-info">
+					<div class="dm-modal-help"><span><i class="flaticon-round"></i></span></div>
+					<button type="button" class="close dm-modal-close" data-dismiss="modal">&times;</button>
+				</div>
+					
+			</div> <!-- .dm-modal-head -->
+					
+					
+					
+					  
+			<div class="head">
+				<div class="h-left">
+					<span class="menu-title">Quick Details</span>
+				</div>
+				<div class="h-center col3-center">
+					<div class="top-bar">
+						<div class="pull-left">
+									<ul class="full-li-small menu-bar-popup hide-for-550 hide-1023">
+										<li class="active">
+											<a href="#">Location Details</a>
+										</li>
+									</ul>
+									
+									<div class="tab-li-block">
+										<a class="tab-li-con show-1023"></a>			
+										<ul class="nav tab-toggle-li collapse show-1023" role="tablist">
+											<li role="presentation" class="active"><a href="#location" aria-controls="location" role="tab" data-toggle="tab">Location Details</a></li>
+											<li role="presentation"><a href="#people" aria-controls="people" role="tab" data-toggle="tab">People</a></li>
+										</ul>
+									</div>
+									
+									<!-- <div class="show-for-550 menu-to-drop-down" style="width: 150px; margin-top: 5px;">
+										<select class="form-control  drop-menu-for-small" id="">
+											<option>Location Details</option>
+										</select>
+									</div> -->
+									
+						</div>
+						<div class="top-bar-optn pull-right"> <!-- hide-for-550 -->
+								
+									<div class="btn-group pull-right show-for-1023" style="position: relative;">
+									  <button type="button" class="btn btn-default btn-custom-sm table-menu-btn show-pop-up-nav-for-small" style="padding-left: 10px; padding-right: 10px; " >
+										<span><i class="glyph-icon flaticon-arrows-1 drop-down-arrow-btn" style="margin-right: 0px;"></i></span>
+									  </button>
+									  
+									  <div class="pop-up-nav-for-small">
+									  
+										<form class="form-inline show-for-850" style="padding: 25px 22px 10px; width: 100%; min-height: 100px; float: none;">
+											<div class="form-group" style="margin-bottom: 0px;">
+												<input type="text" class="form-control search-in-dropdown" placeholder="Type Something">
+												<input type="submit" class="form-control search-in-dropdown" value="Search" style="margin-top: 5px;">
+											</div>
+										</form>
+										
+										<ul class="details-list">
+											<a href="#LocationDetails" data-scroll="LocationDetails">Location Details</a> 
+											<a href="#Logo" data-scroll="Logo">Logo</a>
+											<a href="#Phone" data-scroll="Phone">Phone</a>
+											<a href="#Email" data-scroll="Email">Email</a>			
+											<a href="#Address" data-scroll="Address">Address</a>
+											<a href="#WebAddress" data-scroll="WebAddress">Web Address</a>
+											<a href="#InstantMessaging" data-scroll="InstantMessaging">Instant Messaging</a>			
+											<a href="#Event" data-scroll="Event">Event</a> 
+										</ul>
+										
+									  </div>
+
+									</div>
+									
+									
+
+									
+									
+									
+									
+ 									<div class="btn-group pull-right">
+									  <button type="button" class="btn btn-default btn-custom-sm table-menu-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<span><i class="flaticon-bars btn-icon"></i></span> <span class="hide-for-550">Menu</span>
+									  </button>
+									  <ul class="dropdown-menu table-menu-drop in-modal">
+										<li><a href="#"><span><i class="flaticon-copy-documents-option btn-icon"></i></span>Copy</a></li>
+										<li><a href="#"><span><i class="flaticon-send-mail btn-icon"></i></span>Export</a></li>
+										<li><a href="#"><span><i class="flaticon-delete-button btn-icon"></i></span>Delete</a></li>
+									  </ul>
+									</div>
+									<div class="btn-group pull-right">
+									  <button type="button" class="btn btn-default btn-custom-sm table-menu-btn" >
+										<span><i class="flaticon-diskette btn-icon"></i></span>
+										<span class="change-on-filed-change hide-for-550">Saved</span>
+									  </button>
+									</div>
+									
+						</div>
+					</div>
+				</div> <!-- .top-bar -->
+				<div class="h-right w400">
+					<span class="menu-title">People</span>
+				</div>
+			</div> <!-- .head -->
+					
+					
+
+			<div class="content">
+			
+				<div class="left">
+				
+					<ul class="quick-list">
+						<li class="">
+							<span class="small">Location Name</span>
+							Store
+						</li>
+						<li class="">
+							<span class="small">ABN</span>
+							48123245583
+						</li>
+						<li class="">
+							<span class="small">Main Phone Number</span>
+							<div>0401 293484</div>
+						</li>
+						<li class="">
+							<span class="small">Main email Id</span>
+							acstore@acompanyname.com
+						</li>
+						<li class="">
+							<span class="small">Postal Address</span>
+							<div>PO Box 123,</div>
+							<div>Storeville, UX</div>
+						</li>
+						<li class="">
+							<span class="small">Physical Address</span>
+							<div>PO Box 123,</div>
+							<div>Storeville, UX</div>
+						</li>
+						<li class="">
+							<span class="small">Last Updated</span>
+							<span class="x-small">15/08/2016</span>
+							<span class="x-small">09:34:23 PM</span>
+						</li>
+					</ul>
+				
+				</div> <!-- .left -->
+				
+				<div class="center get-change-in-field scroll-and-get container-fluid select-45">
+
+				
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="location">
+						
+							<section id="LocationDetails" data-anchor="LocationDetails" style="float:left; width: 100%; ">
+								<div class="form-row-head" style="display: block; min-height: 55px;  border-bottom: 1px solid #eee;">
+									<span class="form-block-head pull-left">Location Details</span>
+									<span class="form-block-head pull-right show-for-890 quck-switch">+ Quick Details</span>
+								</div>	
+										
+								<div class="quick-details-for-small show-for-890">
+								
+											<ul class="quick-list">
+												<li class="">
+													<span class="small">Location Name</span>
+													Store
+												</li>
+												<li class="">
+													<span class="small">ABN</span>
+													48123245583
+												</li>
+												<li class="">
+													<span class="small">Main Phone Number</span>
+													<div>0401 293484</div>
+												</li>
+												<li class="">
+													<span class="small">Main email Id</span>
+													acstore@acompanyname.com
+												</li>
+												<li class="">
+													<span class="small">Postal Address</span>
+													<div>PO Box 123,</div>
+													<div>Storeville, UX</div>
+												</li>
+												<li class="">
+													<span class="small">Physical Address</span>
+													<div>PO Box 123,</div>
+													<div>Storeville, UX</div>
+												</li>
+												<li class="">
+													<span class="small">Last Updated</span>
+													<span class="x-small">15/08/2016</span>
+													<span class="x-small">09:34:23 PM</span>
+												</li>
+											</ul>
+								</div>
+
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group autoComplete-con">
+											<input type="text" class="form-control dm-form label-up-can" id="autocomplete">
+											<label class="label-up" for="pwd">Name</label>
+										</div>
+									</div>
+								</div>
+								
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group autoComplete-con">
+											<input type="text" name="currency" class="form-control dm-form label-up-can biginput" id="autocomplete2">
+											<label class="label-up" for="pwd">Name</label>
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<select class="form-control" id="">
+												<option>Type</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<select class="form-control" id="">
+												<option>Parent Location</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<label class="sp-label font-14 padding-top-15">
+											<a href="#"> Lower Location</a>
+										</label>
+									</div>
+								</div>						
+
+							</section> <!-- LocationDetails -->
+							
+							<section id="Logo" data-anchor="Logo" style="position: relative; width: 100%; float:left;">
+						
+								<div class="form-row-head" style="display: block; min-height: 55px;  border-bottom: 1px solid #eee;">
+									<span class="form-block-head pull-left">Logo</span>
+								</div>	
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+									
+										<!-- <div class="form-group ">
+											<img class="form-logo" src="img/f-logo.jpg" alt="Logo">
+											
+											<ul class="icons-info form-logo-remove go-right-small-768">
+												<li class="remove"></li>
+											</ul>
+										</div> -->
+										
+
+											
+												<form action="#">
+												  <div class="image-editor">
+													
+													<label class="custom-file-upload">
+														Upload New Logo
+														<input type="file" class="cropit-image-input">
+													</label>
+													
+													
+													
+													<div class="cropit-preview">
+														
+													</div>
+													
+													
+													<div class="image-size-label">
+													  Resize image
+													</div>
+													
+													<input type="range" class="cropit-image-zoom-input" >
+													
+													<input type="hidden" name="image-data" class="hidden-image-data" />
+													<button class="btn btn-default btn-custom btn-padding-8" type="submit">Submit</button>
+												  </div>
+												</form>
+
+												<div id="result">
+												  <code>$form.serialize() =</code>
+												  <code id="result-data"></code>
+												</div>
+											
+										
+									</div>
+								</div>
+
+							</section> <!-- Logo -->
+							
+							<section id="Phone" data-anchor="Phone" style="position: relative; width: 100%; float:left;">
+						
+								<div class="form-row-head" style="display: block; min-height: 55px; border-bottom: 1px solid #eee;">
+									<span class="form-block-head pull-left">Phone</span>
+									<div class="icon-label-add add-new-item right-item pull-right"><span><i class="flaticon-sign"></i></span><div class="span-div hide-for-700">Add New Phone</div></div>
+								</div>	
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form" id="" value="9846 405434">
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4 col-xs-4 go-full-width-450">
+										<div class="form-group">
+											<select class="form-control" id="">
+												<option>Main Contact</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-2 col-sm-2 col-xs-12 go-full-width-450">
+										<ul class="icons-info go-right-small-768">
+											<li class="remove"></li>
+										</ul>
+									</div>
+								</div>
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form" id="" value="9846 405434">
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4 col-xs-4 go-full-width-450">
+										<div class="form-group has-custom-field">
+											<select class="form-control" id="">
+												<option>Fax</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+
+												<option value="custom">Custom</option>
+												
+											</select>
+											
+											<div class="custom-field-con">
+												<input type="text" class="form-control dm-form" id="" value="">
+												<span class="dismiss-custom-field-con">×</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-sm-2 col-xs-12 go-full-width-450">
+										
+									</div>
+								</div>
+
+							</section> <!-- Phone -->
+							
+							<section id="Email" data-anchor="Email" style="position: relative; width: 100%; float:left;">
+						
+								<div class="form-row-head" style="display: block; min-height: 55px;  border-bottom: 1px solid #eee;">
+									<span class="form-block-head pull-left">Email</span>
+									<div class="icon-label-add add-new-item right-item pull-right"><span><i class="flaticon-sign"></i></span><div class="span-div hide-for-700">Add New Email</div></div>
+								</div>	
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form" id="" value="store@acompanyname.com">
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4 col-xs-4 go-full-width-450">
+										<div class="form-group has-custom-field">
+											<select class="form-control" id="">
+												<option>Main Contact</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option value="custom">Custom</option>
+											</select>
+											
+											<div class="custom-field-con">
+												<input type="text" class="form-control dm-form" id="" value="">
+												<span class="dismiss-custom-field-con">×</spanv>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-sm-2 col-xs-12 go-full-width-450">
+										
+									</div>
+								</div>
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form" id="" value="store@acompanyname.com">
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4 col-xs-4 go-full-width-450">
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form" id="" value="Customer Service">
+										</div>
+									</div>
+									<div class="col-lg-2 col-sm-2 col-xs-12 go-full-width-450">
+										<ul class="icons-info go-right-small-768">
+											<li class="remove"></li>
+										</ul>
+									</div>
+								</div>
+
+							</section> <!-- Email -->
+							
+							<section id="Address" data-anchor="Address" style="position: relative; width: 100%; float:left;">
+						
+								<div class="form-row-head" style="display: block; min-height: 55px;  border-bottom: 1px solid #eee;">
+									<span class="form-block-head pull-left">Address</span>
+									<div class="icon-label-add add-new-item right-item pull-right"><span><i class="flaticon-sign"></i></span><div class="span-div hide-for-700">Add New Address</div></div>
+								</div>	
+								<div class="form-block-each-child margin-b-15">
+									<div class="col-lg-6 col-sm-6">
+										<div class="row">
+											<div class="col-xs-12 go-full-width-450 margin-b-15">
+												<textarea class="form-control" rows="4" id=""></textarea>
+											</div>
+											<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+												<div class="form-group ">
+													<input type="text" class="form-control dm-form label-up-can" id="">
+													<label class="label-up" for="pwd">State</label>
+												</div>
+											</div>
+											<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+												<div class="form-group ">
+													<input type="text" class="form-control dm-form label-up-can" id="">
+													<label class="label-up" for="pwd">Post</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4">
+										<div class="form-group">
+											<select class="form-control" id="">
+												<option>Physical</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form label-up-can" id="">
+											<label class="label-up" for="pwd">State</label>
+										</div>
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form label-up-can" id="">
+											<label class="label-up" for="pwd">State</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6">
+										<div class="row">
+											<div class="col-xs-12 go-full-width-450 margin-b-15">
+												<textarea class="form-control" rows="4" id=""></textarea>
+											</div>
+											<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+												<div class="form-group ">
+													<input type="text" class="form-control dm-form label-up-can" id="">
+													<label class="label-up" for="pwd">State</label>
+												</div>
+											</div>
+											<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+												<div class="form-group ">
+													<input type="text" class="form-control dm-form label-up-can" id="">
+													<label class="label-up" for="pwd">Post</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4">
+										<div class="form-group">
+											<select class="form-control" id="">
+												<option>Billing</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form label-up-can" id="">
+											<label class="label-up" for="pwd">State</label>
+										</div>
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form label-up-can" id="">
+											<label class="label-up" for="pwd">State</label>
+										</div>
+									</div>
+								</div>
+
+							</section> <!-- Address -->
+							
+							<section id="WebAddress" data-anchor="WebAddress" style="position: relative; width: 100%; float:left;">
+						
+								<div class="form-row-head" style="display: block; min-height: 55px;  border-bottom: 1px solid #eee;">
+									<span class="form-block-head pull-left">Web Address</span>
+									<div class="icon-label-add add-new-item right-item pull-right"><span><i class="flaticon-sign"></i></span><div class="span-div hide-for-700">Add New Web Address</div></div>
+								</div>	
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form" id="" value="Web Address">
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4 col-xs-4 go-full-width-450">
+										<div class="form-group">
+											<select class="form-control" id="">
+												<option>Select</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-2 col-sm-2 col-xs-12 go-full-width-450">
+			
+									</div>
+								</div>
+
+							</section> <!-- WebAddress -->
+							
+							<section id="InstantMessaging" data-anchor="InstantMessaging" style="position: relative; width: 100%; float:left;">
+						
+								<div class="form-row-head" style="display: block; min-height: 55px;  border-bottom: 1px solid #eee;">
+									<span class="form-block-head pull-left">Instant Messaging</span>
+									<div class="icon-label-add add-new-item right-item pull-right"><span><i class="flaticon-sign"></i></span><div class="span-div hide-for-700">Add New Instant Messaging</div></div>
+								</div>	
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form" id="" value="Input">
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4 col-xs-4 go-full-width-450">
+										<div class="form-group">
+											<select class="form-control" id="">
+												<option>Select</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-2 col-sm-2 col-xs-12 go-full-width-450">
+				
+									</div>
+								</div>
+
+							</section> <!-- InstantMessaging -->
+							
+							<section id="Event" data-anchor="Event" style="position: relative; width: 100%; float:left;">
+						
+								<div class="form-row-head" style="display: block; min-height: 55px;  border-bottom: 1px solid #eee;">
+									<span class="form-block-head pull-left">Event</span>
+									<div class="icon-label-add add-new-item right-item pull-right"><span><i class="flaticon-sign"></i></span><div class="span-div hide-for-700">Add New Event</div></div>
+								</div>	
+								<div class="form-block-each-child">
+									<div class="col-lg-6 col-sm-6 col-xs-6 go-full-width-450">
+										<div class="form-group ">
+											<input type="text" class="form-control dm-form" id="" value="Event">
+										</div>
+									</div>
+									<div class="col-lg-4 col-sm-4 col-xs-4 go-full-width-450">
+										<div class="form-group">
+											<select class="form-control" id="">
+												<option>Select</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-2 col-sm-2 col-xs-12 go-full-width-450">
+
+									</div>
+								</div>
+
+							</section> <!-- Event -->
+
+						</div>
+						<div role="tabpanel" class="tab-pane" id="people">
+							
+							<ul class="table-list">
+								<li class="li-head">
+									<div class="row">
+										<div class="col-xs-6">
+											Name
+										</div>
+										<div class="col-xs-6">
+											Position
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="row">
+										<div class="col-xs-6">
+											John Doe
+										</div>
+										<div class="col-xs-6">
+											Owner
+										</div>
+									</div>
+								</li>
+							</ul>
+							
+							
+							<a class="btn btn-default button-bottom btn-fluid btn-block button-boder">Edit Access</a>
+							
+						</div>
+					</div>
+							
+
+					
+				</div> <!-- .center -->
+				
+				<div class="right w400 col3-right position-relative">
+					<ul class="table-list">
+						<li class="li-head">
+							<div class="row">
+								<div class="col-xs-6">
+									Name
+								</div>
+								<div class="col-xs-6">
+									Position
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">
+								<div class="col-xs-6">
+									John Doe
+								</div>
+								<div class="col-xs-6">
+									Owner
+								</div>
+							</div>
+						</li>
+					</ul>
+					
+					<a class="btn btn-default button-bottom btn-fluid btn-block button-boder">Edit Access</a>
+					
+				</div> <!-- .right -->
+			
+			</div>
+			
+		</div> <!-- .modal-container -->
+
+	</div>
+		
+	<!-- .Modal -  << -->
+	
+
+
+	</div> <!-- main-div -->
+	
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+
+
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- Data table JS -->
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script> -->
+	
+	<script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.datatables.net/responsive/2.1.1/js/responsive.bootstrap.min.js"></script> -->
+	
+	<!-- Drag and Drop -->
+	<script src="js/jquery.sortable.min.js"></script>
+
+	
+	<!-- Image Crop -->
+	<script src="js/jquery.cropit.js"></script>
+	
+	
+	<!-- Auto Suggest -->
+	<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+	<!-- List -->
+	<script type="text/javascript" src="js/suggest-list.js"></script>
+	
+	
+	
+	<!-- Main JS -->
+	<script src="js/basic.js"></script>
+	
+	
+	
+	<script>
+		
+		$(function() {
+			$('.image-editor').cropit();
+
+			$('form').submit(function() {
+			  // Move cropped image data to hidden input
+			  var imageData = $('.image-editor').cropit('export');
+			  $('.hidden-image-data').val(imageData);
+
+			  // Print HTTP request params
+			  var formValue = $(this).serialize();
+			  $('#result-data').text(formValue);
+
+			  // Prevent the form from actually submitting
+			  return false;
+			});
+		  });
+	
+		$(document).ready(function() {
+			$(".table-loader-pre").fadeOut("slow");
+			
+			$('body').removeClass('block_overflow');
+			
+			
+			$('.main-box').removeClass('hide-x');
+
+		});
+	</script>
+	
+
+	
+	
+	
+  </body>
+</html>
+
+
+
+
+
